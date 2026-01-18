@@ -1,0 +1,13 @@
+# Google GenAI 新版 SDK
+google-genai>=0.1.0
+
+# 图像处理与 HEIC 支持
+pillow-heif>=0.13.0
+pillow<12.0
+
+# 环境变量与配置管理
+python-dotenv
+pyyaml
+
+# 网络请求 (SDK底层依赖，显式声明更稳妥)
+requests

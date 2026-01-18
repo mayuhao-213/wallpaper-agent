@@ -1,0 +1,208 @@
+styles:
+  # ==================================================
+  # 🟢 动漫与插画类 (二次元/3D/手绘)
+  # ==================================================
+  makoto_shinkai:
+    id : makoto_shinkai
+    name: "新海诚·云端 (Makoto Shinkai)"
+    category: "Anime"
+    prompt_template: >
+      (masterpiece, best quality:1.2), style of Makoto Shinkai, anime style,
+      cinematic lighting, vibrant colors,
+      {description},
+      lens flare, shooting stars, highly detailed clouds, dreamy atmosphere, 8k wallpaper
+    negative_prompt: "lowres, bad anatomy, text, watermark, blurry, ugly, realistic"
+    recommended_denoising: 0.55
+
+  ghibli_pure:
+    id : ghibli_pure
+    name: "吉卜力·治愈 (Studio Ghibli)"
+    category: "Anime"
+    prompt_template: >
+      (masterpiece, best quality:1.2), Studio Ghibli style, Hayao Miyazaki,
+      hand-drawn animation, watercolor texture,
+      {description},
+      peaceful, lush greenery, summer vibes, healing atmosphere, clean lines
+    negative_prompt: "3d, realistic, dark, horror, low quality, noise"
+    recommended_denoising: 0.60
+
+  pixar_3d:
+    id : pixar_3d
+    name: "皮克斯·3D萌宠 (Pixar/Disney)"
+    category: "3D"
+    prompt_template: >
+      (masterpiece, best quality:1.2), Pixar style, Disney animation, 3D render,
+      C4D, octane render, blind box toy style,
+      {description},
+      soft magical volumetric lighting, cute, adorable, dreamy pastel bokeh, 8k
+    negative_prompt: "2d, sketch, realistic photo, scary, ugly, deformed"
+    recommended_denoising: 0.65
+
+  city_pop_80s:
+    id : city_pop_80s
+    name: "复古动漫·CityPop (Retro 80s)"
+    category: "Anime"
+    prompt_template: >
+      (masterpiece), retro 80s anime style, cel shading, lo-fi aesthetic,
+      vaporwave color palette, neon pink and blue,
+      {description},
+      vintage vhs glitch effect, nostalgic, city pop album cover vibe
+    negative_prompt: "3d, modern, realistic, hd, 4k, smooth"
+    recommended_denoising: 0.55
+
+  mucha_art_nouveau:
+    id : mucha_art_nouveau
+    name: "穆夏·华丽女神 (Art Nouveau)"
+    category: "Illustration"
+    prompt_template: >
+      (masterpiece), style of Alphonse Mucha, art nouveau,
+      intricate details, stained glass effect, flowing lines, flowers and vines frame,
+      {description},
+      elegant, goddess, vintage poster style, golden outline
+    negative_prompt: "photo, realistic, 3d, simple, minimalist"
+    recommended_denoising: 0.50
+
+  # ==================================================
+  # 🔵 经典艺术流派 (油画/水墨/印象派)
+  # ==================================================
+  monet_impressionism:
+    id : monet_impressionism
+    name: "莫奈·光影 (Monet)"
+    category: "Art"
+    prompt_template: >
+      (masterpiece), style of Claude Monet, impressionism,
+      oil painting, visible brushstrokes, soft dappled light,
+      {description},
+      pastel colors, dreamy, romantic, ethereal, pond, water lilies vibe
+    negative_prompt: "photo, realistic, cartoon, anime, 3d render, sharp lines"
+    recommended_denoising: 0.50
+
+  van_gogh_starry:
+    id : van_gogh_starry
+    name: "梵高·星空 (Van Gogh)"
+    category: "Art"
+    prompt_template: >
+      (masterpiece), style of Vincent van Gogh, post-impressionism,
+      thick impasto paint, swirling patterns, vivid yellow and blue colors,
+      {description},
+      expressive, emotional, starry night vibes, artistic texture
+    negative_prompt: "photo, realistic, smooth, flat, digital art"
+    recommended_denoising: 0.55
+
+  ukiyo_e_wave:
+    id : ukiyo_e_wave
+    name: "浮世绘·浪潮 (Ukiyo-e)"
+    category: "Art"
+    prompt_template: >
+      (masterpiece), ukiyo-e style, japanese woodblock print, Hokusai style,
+      flat colors, bold outlines, traditional japanese aesthetic,
+      {description},
+      vintage paper texture, kanagawa wave vibe, elegant
+    negative_prompt: "photo, 3d, realistic, shiny, modern"
+    recommended_denoising: 0.55
+
+  new_chinese_ink:
+    id : new_chinese_ink
+    name: "新中式·水墨 (Chinese Ink)"
+    category: "Art"
+    prompt_template: >
+      (masterpiece), chinese ink wash painting, guohua,
+      black and white with red accents, splashing ink, negative space (liubai),
+      {description},
+      zen, minimalist, ethereal, calligraphy brush strokes, oriental aesthetic
+    negative_prompt: "colorful, 3d, realistic, oil painting, dense"
+    recommended_denoising: 0.50
+
+  # ==================================================
+  # 🟠 电影与摄影类 (质感/光影)
+  # ==================================================
+  wes_anderson:
+    id: wes_anderson
+    name: "韦斯·安德森 (Wes Anderson)"
+    category: "Cinema"
+    prompt_template: >
+      (masterpiece), style of Wes Anderson, grand budapest hotel vibe,
+      symmetrical composition, pastel color palette, pink and yellow,
+      {description},
+      whimsical, surreal, flat lighting, cinematic still, retro aesthetic
+    negative_prompt: "dark, gritty, asymmetrical, high contrast, realistic"
+    recommended_denoising: 0.50
+
+  cyberpunk_neon:
+    id: cyberpunk_neon
+    name: "赛博朋克·霓虹 (Cyberpunk)"
+    category: "Cinema"
+    prompt_template: >
+      (masterpiece), cyberpunk style, blade runner vibe,
+      neon lights, rain, futuristic city, blue and purple color grading,
+      {description},
+      holograms, high tech, sci-fi, highly detailed, ray tracing
+    negative_prompt: "daytime, sunny, vintage, nature, rustic"
+    recommended_denoising: 0.60
+
+  film_noir_bw:
+    id: film_noir_bw
+    name: "黑白电影·诺尔 (Film Noir)"
+    category: "Cinema"
+    prompt_template: >
+      (masterpiece), film noir style, black and white photography,
+      high contrast, dramatic shadows, chiaroscuro lighting,
+      {description},
+      moody, mysterious, cinematic composition, vintage film grain
+    negative_prompt: "color, bright, cartoon, anime, flat lighting"
+    recommended_denoising: 0.50
+
+  national_geographic:
+    id  : national_geographic
+    name: "国家地理·纪实 (Nat Geo)"
+    category: "Photography"
+    prompt_template: >
+      (masterpiece), award winning photography, National Geographic style,
+      highly detailed, 8k resolution, raw photo,
+      {description},
+      natural lighting, depth of field, sharp focus, professional color grading
+    negative_prompt: "painting, drawing, illustration, cartoon, 3d, anime"
+    recommended_denoising: 0.35
+
+  # ==================================================
+  # 🟣 情绪与氛围类 (INS风/玄学/小众)
+  # ==================================================
+  dreamcore_surreal:
+    id : dreamcore_surreal
+    name: "梦核·超现实 (Dreamcore)"
+    category: "Aesthetic"
+    prompt_template: >
+      (masterpiece), dreamcore aesthetic, liminal space, surrealism,
+      weirdly familiar, soft fuzzy texture, nostalgia,
+      {description},
+      blue sky with white clouds, unnatural lighting, dreamlike, eerie but comforting
+    negative_prompt: "realistic, dark, scary, horror, sharp"
+    recommended_denoising: 0.60
+
+  minimalist_ins:
+    id : minimalist_ins
+    name: "极简·INS风 (Minimalist)"
+    category: "Aesthetic"
+    prompt_template: >
+      (masterpiece), minimalist style, flat lay photography or simple illustration,
+      clean background, negative space, morandi colors,
+      {description},
+      modern, elegant, high end, instagram aesthetic, less is more
+    negative_prompt: "cluttered, messy, detailed, complex, noise"
+    recommended_denoising: 0.50
+    
+    # ==================================================
+  # 🔥 当季爆款 (Trending)
+  # ==================================================
+  clay_stop_motion:
+    id : clay_stop_motion
+    name: "粘土世界·定格 (Claymation)"
+    category: "Trending"
+    prompt_template: >
+      (masterpiece, best quality:1.2), claymation style, stop motion animation,
+      plasticine material, play-doh texture, soft rounded edges,
+      {description},
+      matte finish, handmade feel, miniature world, tilt-shift photography,
+      soft studio lighting, cute, chunky, 3d render but clay texture
+    negative_prompt: "glossy, shiny, metallic, realistic skin, real photo, 2d, sketch, anime, sharp edges"
+    recommended_denoising: 0.65
