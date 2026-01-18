@@ -1,0 +1,20 @@
+# 1. 排除环境变量文件 (保护 API Key)
+.env
+
+# 2. 排除 Python 缓存和虚拟环境
+__pycache__/
+*.pyc
+venv/
+.venv/
+.idea/
+.vscode/
+
+# 3. 排除生成的图片和输入素材 (只传代码，不传数据)
+assets/inputs/*
+assets/outputs/*
+!assets/inputs/.gitkeep  # 保留目录结构
+!assets/outputs/.gitkeep
+
+# 4. 排除系统文件
+.DS_Store
+Thumbs.db
