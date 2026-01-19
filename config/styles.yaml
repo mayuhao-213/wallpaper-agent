@@ -2,207 +2,660 @@ styles:
   # ==================================================
   # 🟢 动漫与插画类 (二次元/3D/手绘)
   # ==================================================
+  
+  # 1. 新海诚 (Makoto Shinkai)
   makoto_shinkai:
     id : makoto_shinkai
-    name: "新海诚·云端 (Makoto Shinkai)"
+    name: "新海诚·幻视 (Shinkai Visuals)"
     category: "Anime"
     prompt_template: >
-      (masterpiece, best quality:1.2), style of Makoto Shinkai, anime style,
-      cinematic lighting, vibrant colors,
-      {description},
-      lens flare, shooting stars, highly detailed clouds, dreamy atmosphere, 8k wallpaper
-    negative_prompt: "lowres, bad anatomy, text, watermark, blurry, ugly, realistic"
+      (masterpiece, best quality:1.2), Makoto Shinkai visual style, high-fidelity digital background art.
+      Hyper-realistic lighting, volumetric sunbeams (Tyndall effect), strong atmospheric perspective.
+      Saturated, vibrant color palette (azure, magenta, amber gradients).
+      Sharp focus, detailed reflections, cinematic composition, pristine digital rendering.
+      {description}
+    negative_prompt: "lowres, bad anatomy, text, watermark, blurry, noise, grain, monochromatic, dull colors"
     recommended_denoising: 0.55
+    motion_guide: >
+      Priority: Atmospheric Lighting.
+      Strictly Static (Anchor): Main subjects, buildings, hard surfaces.
+      Allowed Motion:
+        - Light: Slow shifting sunbeams, subtle lens flare shimmer.
+        - Atmosphere: Dust motes dancing in light, distant atmospheric haze drift.
+        - Physics: If outdoors, slow movement of sky gradient; If indoors, dust particles only.
+      Intensity: Low. Majestic and slow.
 
+  # 2. 吉卜力 (Studio Ghibli)
   ghibli_pure:
     id : ghibli_pure
-    name: "吉卜力·治愈 (Studio Ghibli)"
+    name: "吉卜力·手绘 (Ghibli Gouache)"
     category: "Anime"
     prompt_template: >
-      (masterpiece, best quality:1.2), Studio Ghibli style, Hayao Miyazaki,
-      hand-drawn animation, watercolor texture,
-      {description},
-      peaceful, lush greenery, summer vibes, healing atmosphere, clean lines
-    negative_prompt: "3d, realistic, dark, horror, low quality, noise"
+      (masterpiece, best quality:1.2), Studio Ghibli background art style, Oga Kazuo aesthetic.
+      Traditional hand-drawn animation, opaque watercolor (gouache) texture on paper.
+      Soft, organic brushstrokes, naturalistic and earthy color grading.
+      Nostalgic atmosphere, peaceful mood, pictorial composition, matte painting finish.
+      {description}
+    negative_prompt: "3d, cgi, glossy, digital gradients, sharp outlines, harsh lighting, neon, photorealistic"
     recommended_denoising: 0.60
+    motion_guide: >
+      Priority: Organic "Breathing".
+      Strictly Static (Anchor): Characters, furniture, heavy objects.
+      Allowed Motion:
+        - Nature: Subtle sway of soft objects (fabric, plants if any).
+        - Physics: "Boiling lines" effect (subtle hand-drawn edge vibration) or gentle breeze.
+        - Vibe: Peaceful, rhythmic, frame-by-frame animation feel (12fps style).
+      Intensity: Very Low. Cozy and rhythmic.
 
+  # 3. 皮克斯/迪士尼 (Pixar 3D)
   pixar_3d:
     id : pixar_3d
-    name: "皮克斯·3D萌宠 (Pixar/Disney)"
+    name: "皮克斯·灵动 (Pixar Magic)"
     category: "3D"
     prompt_template: >
-      (masterpiece, best quality:1.2), Pixar style, Disney animation, 3D render,
-      C4D, octane render, blind box toy style,
-      {description},
-      soft magical volumetric lighting, cute, adorable, dreamy pastel bokeh, 8k
-    negative_prompt: "2d, sketch, realistic photo, scary, ugly, deformed"
+      (masterpiece, best quality:1.2), Pixar animation studio aesthetic, high-end 3D computer graphics.
+      Soft rounded geometry, "Subsurface Scattering" (SSS) on materials, clay-like warmth but photorealistic lighting.
+      Octane Render style, cinema-quality depth of field, vivid yet balanced color harmony.
+      Expressive lighting setup (rim light + soft fill), clean and smooth textures.
+      {description}
+    negative_prompt: "2d, sketch, jagged edges, low poly, uncanny valley, harsh shadows, noise, gritty, realistic photo texture"
     recommended_denoising: 0.65
+    motion_guide: >
+      Priority: Character/Object Life.
+      Strictly Static (Anchor): The floor, heavy background props.
+      Allowed Motion:
+        - Physics: "Squash and stretch" logic (subtle bounce).
+        - Living: If subject is living -> Slow blinking, chest heaving (breathing).
+        - Non-living: If object -> Slight floating/hovering or glossy reflection shift.
+      Intensity: Medium. Bouncy, smooth, and fluid (60fps).
 
+  # 4. 80年代复古/CityPop (Retro Lo-fi)
   city_pop_80s:
     id : city_pop_80s
-    name: "复古动漫·CityPop (Retro 80s)"
+    name: "复古·幻像 (Retro Analog)"
     category: "Anime"
     prompt_template: >
-      (masterpiece), retro 80s anime style, cel shading, lo-fi aesthetic,
-      vaporwave color palette, neon pink and blue,
-      {description},
-      vintage vhs glitch effect, nostalgic, city pop album cover vibe
-    negative_prompt: "3d, modern, realistic, hd, 4k, smooth"
+      (masterpiece), 1980s Japanese animation aesthetic, vintage cel shading style.
+      Analog TV texture, VHS tape grain simulation, slight chromatic aberration (color shift).
+      Lo-fi visual fidelity, flat lighting with hard shadows (anime style).
+      Nostalgic mood, washed-out or technicolor saturation depending on the scene.
+      {description}
+    negative_prompt: "3d, cgi, modern digital art, smooth gradients, 4k crisp, volumetric lighting, hyper-realistic"
     recommended_denoising: 0.55
+    motion_guide: >
+      Priority: Lo-fi Atmosphere.
+      Strictly Static (Anchor): The overall composition frame.
+      Allowed Motion:
+        - Medium: VHS static noise overlay, scanlines moving slowly.
+        - Animation: Limited animation style (frame modulation, like 8fps or 12fps).
+        - Environment: Hair or clothes blowing in a loop, but with "step" movement (not smooth).
+      Intensity: Low. Gritty and nostalgic.
 
+
+  # 5. 穆夏/新艺术运动 (Mucha / Art Nouveau)
   mucha_art_nouveau:
     id : mucha_art_nouveau
-    name: "穆夏·华丽女神 (Art Nouveau)"
+    name: "穆夏·装饰 (Mucha Nouveau)"
     category: "Illustration"
     prompt_template: >
-      (masterpiece), style of Alphonse Mucha, art nouveau,
-      intricate details, stained glass effect, flowing lines, flowers and vines frame,
-      {description},
-      elegant, goddess, vintage poster style, golden outline
-    negative_prompt: "photo, realistic, 3d, simple, minimalist"
+      (masterpiece), Art Nouveau aesthetic, style of Alphonse Mucha.
+      Lithographic poster texture, flat shading with distinct, elegant contours (strong outlines).
+      Intricate organic ornamentation, "Whiplash" curves, arabesque patterns.
+      Color palette: Desaturated pastels (sage green, peach, ochre) with gold leaf accents.
+      Decorative composition, stylized background elements (halos or mosaics).
+      {description}
+    negative_prompt: "photo, realistic, 3d, deep depth of field, minimalist, modern, neon, rough sketch, photography"
     recommended_denoising: 0.50
+    motion_guide: >
+      Priority: Ornamental Growth.
+      Strictly Static (Anchor): Main subject pose, text (if any), main structural outlines.
+      Allowed Motion:
+        - Pattern: Slow, kaleidoscopic rotation of background halos/circles.
+        - Nature: Vines or floral patterns slowly unfurling or swaying (growth cycle).
+        - Texture: Gold accents shimmering (specular highlight shift).
+        - Physics: Hair or fabric floating as if underwater (ethereal weightlessness).
+      Intensity: Low. Elegant and decorative.
 
   # ==================================================
   # 🔵 经典艺术流派 (油画/水墨/印象派)
   # ==================================================
+  # 6. 莫奈/印象派 (Monet / Impressionism)
   monet_impressionism:
     id : monet_impressionism
-    name: "莫奈·光影 (Monet)"
+    name: "莫奈·光感 (Monet Impression)"
     category: "Art"
     prompt_template: >
-      (masterpiece), style of Claude Monet, impressionism,
-      oil painting, visible brushstrokes, soft dappled light,
-      {description},
-      pastel colors, dreamy, romantic, ethereal, pond, water lilies vibe
-    negative_prompt: "photo, realistic, cartoon, anime, 3d render, sharp lines"
+      (masterpiece), Impressionist painting style, Claude Monet aesthetic.
+      "En plein air" lighting rendering, visible loose brushstrokes (tache technique).
+      Atmospheric perspective, vibration of light, broken color application (optical mixing).
+      Soft edges, lack of black shadows (colored shadows), ephemeral atmosphere, capturing the fleeting moment.
+      {description}
+    negative_prompt: "photo, realistic, cartoon, anime, 3d render, sharp lines, black shadows, clear outlines, hard edges"
     recommended_denoising: 0.50
+    motion_guide: >
+      Priority: Atmospheric Shimmer.
+      Strictly Static (Anchor): Major structures, horizon line, main subject mass.
+      Allowed Motion:
+        - Light: Dappled light shifting (sunlight filtering through), shimmering reflections.
+        - Texture: "Vibrating" air effect (heat haze or subtle blur movement).
+        - Nature: Gentle, fluid movement of foliage or water (if present), but soft and blurry.
+      Intensity: Low. Hazy, dreamlike, and shimmering.
 
+  # 7. 梵高/后印象派 (Van Gogh / Post-Impressionism)
   van_gogh_starry:
     id : van_gogh_starry
-    name: "梵高·星空 (Van Gogh)"
+    name: "梵高·笔触 (Van Gogh Impasto)"
     category: "Art"
     prompt_template: >
-      (masterpiece), style of Vincent van Gogh, post-impressionism,
-      thick impasto paint, swirling patterns, vivid yellow and blue colors,
-      {description},
-      expressive, emotional, starry night vibes, artistic texture
-    negative_prompt: "photo, realistic, smooth, flat, digital art"
+      (masterpiece), Post-Impressionist style, Vincent van Gogh aesthetic.
+      Heavy "Impasto" texture (thick paint application), rhythmic and directional brushstrokes.
+      Expressive distortion of forms, bold complementary color contrast.
+      Turbulent energy, swirling emotional patterns, tactile canvas surface, vigorous execution.
+      {description}
+    negative_prompt: "photo, realistic, smooth, flat, digital art, shiny, minimalist, straight lines, calm"
     recommended_denoising: 0.55
+    motion_guide: >
+      Priority: Rhythmic Flow (Turbulence).
+      Strictly Static (Anchor): The main subject's silhouette/outline.
+      Allowed Motion:
+        - Texture: The paint strokes themselves should appear to flow or swirl (liquid canvas effect).
+        - Background: Circular or wave-like motion in the sky/background elements (the "Starry Night" flow logic, but applied to any sky).
+        - Vibe: Intense, pulsating energy, hallucinogenic movement.
+      Intensity: Medium. Expressive and fluid.
 
+  # 8. 浮世绘 (Ukiyo-e)
   ukiyo_e_wave:
     id : ukiyo_e_wave
-    name: "浮世绘·浪潮 (Ukiyo-e)"
+    name: "浮世绘·版画 (Ukiyo-e Print)"
     category: "Art"
     prompt_template: >
-      (masterpiece), ukiyo-e style, japanese woodblock print, Hokusai style,
-      flat colors, bold outlines, traditional japanese aesthetic,
-      {description},
-      vintage paper texture, kanagawa wave vibe, elegant
-    negative_prompt: "photo, 3d, realistic, shiny, modern"
+      (masterpiece), Japanese woodblock print style (Mokuhanga), Hokusai aesthetic.
+      Distinct bold outlines (key block lines), flat color areas with "Bokashi" gradients (fading color technique).
+      Textured Washi paper background, 2D planar perspective (lack of shadows).
+      Traditional mineral color palette (Indigo/Prussian blue, Vermilion, Ochre).
+      Stylized elemental forms (fractal-like clouds or water if present), asymmetry.
+      {description}
+    negative_prompt: "3d, realistic, shiny, photograph, shading, volumetric lighting, gradients, modern digital art, blurry"
     recommended_denoising: 0.55
+    # 🔴 Motion Guide: 强调“层叠感”与“版画分层”
+    motion_guide: >
+      Priority: Parallax Layers.
+      Strictly Static (Anchor): The bold outlines and main structural lines.
+      Allowed Motion:
+        - Technique: "Parallax scrolling" effect (background layers moving slower than foreground).
+        - Nature: Stylized movement (e.g., if water, it moves like rigid waves; if clouds, they drift like paper cutouts).
+        - Texture: Subtle paper grain shifting.
+      Intensity: Low. Graphic and theater-like depth.
 
+  # 9. 新中式水墨 (Neo-Chinese Ink)
   new_chinese_ink:
     id : new_chinese_ink
-    name: "新中式·水墨 (Chinese Ink)"
+    name: "新中式·墨韵 (Ink Flow)"
     category: "Art"
     prompt_template: >
-      (masterpiece), chinese ink wash painting, guohua,
-      black and white with red accents, splashing ink, negative space (liubai),
-      {description},
-      zen, minimalist, ethereal, calligraphy brush strokes, oriental aesthetic
-    negative_prompt: "colorful, 3d, realistic, oil painting, dense"
+      (masterpiece), Neo-Chinese Ink Wash Painting (Shuimo), modern abstract oriental aesthetic.
+      Interplay of wet wash (blooming ink) and dry brush strokes ("Feibai").
+      Significant negative space ("Liubai") for compositional balance, minimalist philosophy.
+      High contrast between heavy ink and empty paper, calligraphic gestural lines.
+      Monochromatic tones with subtle desaturated mineral accents (cyan or cinnabar).
+      {description}
+    negative_prompt: "oil painting, thick paint, colorful, cluttered, full coverage, realistic photo, 3d, western art style"
     recommended_denoising: 0.50
+    motion_guide: >
+      Priority: Fluid Diffusion.
+      Strictly Static (Anchor): The dry brush strokes (Feibai) and solid objects.
+      Allowed Motion:
+        - Ink Physics: "Ink diffusion" effect (ink slowly blooming/spreading on wet paper).
+        - Atmosphere: Mist or smoke flowing fluidly through the negative space (Liubai).
+        - Vibe: Ethereal, Zen, slow-motion fluid dynamics.
+      Intensity: Very Low. Meditative and fluid.
 
+  # 10. 文艺复兴油画 (Renaissance Oil)
+  renaissance_classic:
+    id : renaissance_classic
+    name: "文艺复兴·古典 (Renaissance)"
+    category: "Art"
+    prompt_template: >
+      (masterpiece), High Renaissance oil painting style, da Vinci or Raphael aesthetic.
+      Technique: "Sfumato" (soft blending of contours) and "Chiaroscuro" (dramatic light and shadow contrast).
+      Composition: Triangular composition balance, atmospheric perspective (bluish hazy background).
+      Texture: Cracked oil paint varnish (craquelure), canvas grain, earthy and rich color palette (ochre, umber, lapis lazuli).
+      Museum quality rendering, soft diffused northern light.
+      {description}
+    negative_prompt: "bright neon colors, modern, digital art, flat, sketch, cartoon, anime, sharp edges, glitch"
+    recommended_denoising: 0.50
+    # 🔴 Motion Guide: 博物馆级的静谧
+    motion_guide: >
+      Priority: Museum Stillness.
+      Strictly Static (Anchor): The main subject (portraits/objects) must be frozen like a classic painting.
+      Allowed Motion:
+        - Light: Candlelight flicker effect or slow moving shadow (sun dial logic).
+        - Texture: Subtle dust particles floating in the light shaft.
+        - Vibe: Heavy, slow, and timeless.
+      Intensity: Very Low.
+
+  # 11. 立体主义 (Cubism)
+  cubism_picasso:
+    id : cubism_picasso
+    name: "立体主义·几何 (Cubism)"
+    category: "Art"
+    prompt_template: >
+      (masterpiece), Cubism art style, Picasso or Braque aesthetic.
+      Deconstructed geometry, "Multiple Perspectives" flattened onto a 2D plane.
+      Interlocking geometric planes, sharp angular fragmentation, collage-like composition.
+      Palette: Muted earth tones mixed with bold, flat color blocks.
+      Abstract representation of reality, analyzing objects by breaking them up and reassembling them.
+      {description}
+    negative_prompt: "realistic, smooth, photo, 3d, curved lines, soft blending, gradient, depth of field"
+    recommended_denoising: 0.65
+    # 🔴 Motion Guide: 碎片的错位移动
+    motion_guide: >
+      Priority: Geometric Shift.
+      Strictly Static (Anchor): The overall frame border.
+      Allowed Motion:
+        - Geometry: Individual geometric planes sliding over each other (kaleidoscope logic).
+        - Perspective: Subtle shift of angles (like looking through a prism).
+        - Vibe: Mechanical, intellectual, disjointed.
+      Intensity: Medium.
+
+  # 12. 超现实主义 (Surrealism)
+  # 核心: 达利/马格利特。强调“梦境逻辑”和“物理扭曲”。
+  # 适合: 想要搞怪、梦幻或奇异风格的壁纸。
+  surrealism_dali:
+    id : surrealism_dali
+    name: "超现实·梦境 (Surrealism)"
+    category: "Art"
+    prompt_template: >
+      (masterpiece), Surrealist art style, Salvador Dali or Magritte aesthetic.
+      Dream logic, juxtaposition of unrelated objects, defying physics.
+      "Melting" soft forms vs hard realistic rendering, vast empty landscapes (metaphysical painting).
+      Hyper-realistic technique applied to impossible scenes, distinct horizon line, eerie clarity.
+      Subconscious symbolism, bizarre but polished.
+      {description}
+    negative_prompt: "blurry, messy, abstract, sketch, cartoon, ordinary, logical, boring"
+    recommended_denoising: 0.60
+    # 🔴 Motion Guide: 液化与悬浮
+    motion_guide: >
+      Priority: Defying Physics.
+      Strictly Static (Anchor): The horizon line.
+      Allowed Motion:
+        - Physics: Solid objects melting (liquid flow), heavy objects floating (anti-gravity).
+        - Distortion: Slow morphing of shapes (clock melting logic).
+        - Vibe: Eerie, dreamlike, uncanny.
+      Intensity: Medium.
+
+  # 13. 波普艺术 (Pop Art)
+  # 核心: 罗伊·利希滕斯坦/安迪·沃霍尔。强调“网点”和“高饱和”。
+  # 适合: 想要复古漫画感、时尚感强烈的壁纸。
+  pop_art_comic:
+    id : pop_art_comic
+    name: "波普·漫画 (Pop Art)"
+    category: "Illustration"
+    prompt_template: >
+      (masterpiece), Pop Art style, Roy Lichtenstein comic aesthetic.
+      "Ben-Day dots" shading technique (halftone patterns), thick bold black outlines.
+      Primary color palette (Cyan, Magenta, Yellow), high contrast, flat coloring.
+      Commercial print aesthetic, retro comic book panel style, dramatic typography impact.
+      {description}
+    negative_prompt: "sketch, watercolor, oil painting, realistic, 3d, gradient, soft edges, pastel"
+    recommended_denoising: 0.55
+    # 🔴 Motion Guide: 网点震动与漫画分镜
+    motion_guide: >
+      Priority: Print Graphic.
+      Strictly Static (Anchor): The black outlines.
+      Allowed Motion:
+        - Texture: Ben-Day dots vibrating or scrolling (halftone animation).
+        - Background: Sunburst or radial lines rotating behind the subject.
+        - Vibe: Energetic, jerky (low frame rate), comic book feel.
+      Intensity: Medium.
+
+  # 14. 像素艺术 (Pixel Art)
+  # 核心: 8-bit/16-bit 游戏风。虽然是数字艺术，但已成为一种经典流派。
+  # 适合: 游戏玩家、复古怀旧。
+  pixel_art_retro:
+    id : pixel_art_retro
+    name: "像素·8-bit (Pixel Art)"
+    category: "Illustration"
+    prompt_template: >
+      (masterpiece), Pixel Art style, 16-bit SNES game aesthetic.
+      Limited color palette (dithering technique), precise grid-based pixel placement.
+      Isometric view or side-scroller perspective, aliased edges (no anti-aliasing).
+      Retro gaming nostalgia, sprite-based character design, clean digital look.
+      {description}
+    negative_prompt: "blurry, anti-aliased, vector, smooth lines, high res, 4k, photograph, realism"
+    recommended_denoising: 0.65
+    # 🔴 Motion Guide: 游戏循环
+    motion_guide: >
+      Priority: Sprite Animation.
+      Strictly Static (Anchor): The pixel grid (no smooth movement, strictly pixel-perfect).
+      Allowed Motion:
+        - Character: Idle animation cycle (bouncing up and down, breathing).
+        - Environment: Waterfalls flowing (cycle), lights blinking on/off.
+        - Vibe: Digital, jerky, arcade game loop.
+      Intensity: Medium.
+  
+  
   # ==================================================
   # 🟠 电影与摄影类 (质感/光影)
   # ==================================================
+  # 15. 韦斯·安德森 (Wes Anderson)
   wes_anderson:
     id: wes_anderson
-    name: "韦斯·安德森 (Wes Anderson)"
+    name: "韦斯·安德森·对称 (Symmetry)"
     category: "Cinema"
     prompt_template: >
-      (masterpiece), style of Wes Anderson, grand budapest hotel vibe,
-      symmetrical composition, pastel color palette, pink and yellow,
-      {description},
-      whimsical, surreal, flat lighting, cinematic still, retro aesthetic
-    negative_prompt: "dark, gritty, asymmetrical, high contrast, realistic"
+      (masterpiece), Wes Anderson cinematic style, "Tableau Vivant" aesthetic.
+      Strict "Central Symmetry" and one-point perspective.
+      Planimetric composition (flat depth), high-key flat lighting (lack of deep shadows).
+      Saturated pastel color palette (meticulously curated color coordination).
+      Theatrical set design feel, whimsical deadpan atmosphere, orthogonal lines.
+      {description}
+    negative_prompt: "asymmetrical, dutch angle, handheld camera, chaotic, deep shadows, gritty, realistic documentary style, motion blur, dark"
     recommended_denoising: 0.50
+    # 🔴 Motion Guide: 强调“机械感”与“定格动画感”
+    motion_guide: >
+      Priority: Mechanical Precision.
+      Strictly Static (Anchor): The symmetrical center line and the main subject's gaze.
+      Allowed Motion:
+        - Physics: "Clockwork" movement (jerky, stop-motion feel) rather than smooth flow.
+        - Background: Linear movement (sideways or up/down only), no diagonal drifting.
+        - Vibe: Quirky, artificial, and perfectly timed (like a stage play).
+      Intensity: Low. Rigid and precise.
 
+  # 16. 赛博朋克 (Cyberpunk)
   cyberpunk_neon:
     id: cyberpunk_neon
-    name: "赛博朋克·霓虹 (Cyberpunk)"
+    name: "赛博朋克·夜幻 (Neon Noir)"
     category: "Cinema"
     prompt_template: >
-      (masterpiece), cyberpunk style, blade runner vibe,
-      neon lights, rain, futuristic city, blue and purple color grading,
-      {description},
-      holograms, high tech, sci-fi, highly detailed, ray tracing
-    negative_prompt: "daytime, sunny, vintage, nature, rustic"
+      (masterpiece), Cyberpunk aesthetic, "High Tech Low Life" atmosphere.
+      Neon Noir lighting style (chiaroscuro with colored light sources).
+      Wet surface reflections (specular highlights), volumetric fog/haze, subtle chromatic aberration.
+      Textural contrast between gritty industrial decay and sleek advanced technology.
+      Dystopian mood, cinematic color grading (teal and orange or acid colors).
+      {description}
+    negative_prompt: "daylight, sunny, naturalism, clean white, minimalist, rustic, vintage, soft pastel, flat lighting"
     recommended_denoising: 0.60
+    # 🔴 Motion Guide: 强调“故障感”与“环境躁动”
+    motion_guide: >
+      Priority: Digital Decay / Energy.
+      Strictly Static (Anchor): Massive structures, concrete, hardware.
+      Allowed Motion:
+        - Light: Neon signs flickering (bad connection), holographic projection interference (scanlines).
+        - Atmosphere: Heavy steam venting (pressure), rain (only if outdoors).
+        - Tech: Glitch effects on surfaces, subtle data stream overlays.
+      Intensity: Medium. Restless and electric.
 
+  # 17. 黑白电影/诺尔 (Film Noir)
   film_noir_bw:
     id: film_noir_bw
-    name: "黑白电影·诺尔 (Film Noir)"
+    name: "黑白·光影 (Noir Contrast)"
     category: "Cinema"
     prompt_template: >
-      (masterpiece), film noir style, black and white photography,
-      high contrast, dramatic shadows, chiaroscuro lighting,
-      {description},
-      moody, mysterious, cinematic composition, vintage film grain
-    negative_prompt: "color, bright, cartoon, anime, flat lighting"
+      (masterpiece), Film Noir aesthetic, German Expressionist lighting influence.
+      "Low-key" lighting setup (high contrast ratio between light and dark), harsh shadows.
+      Monochromatic photography, heavy film grain simulation (Kodak Tri-X style).
+      Dramatic "Dutch Angle" or claustrophobic composition, Chiaroscuro rendering.
+      Silhouette emphasis, psychological tension, hard lighting on edges (rim light).
+      {description}
+    negative_prompt: "color, sepia, soft lighting, flat, high key, overexposed, happy, cartoon, anime, smooth digital look"
     recommended_denoising: 0.50
+    # 🔴 Motion Guide: 强调“紧张感”与“阴影的压迫”
+    motion_guide: >
+      Priority: Tension & Shadow.
+      Strictly Static (Anchor): The main silhouette or hard architectural edges.
+      Allowed Motion:
+        - Light: "Venetian blind" shadow effect moving slowly across the scene.
+        - Atmosphere: Cigarette smoke swirling (if applicable) or heavy rain against glass.
+        - Vibe: Suspenseful, slow-burning, ominous.
+      Intensity: Low. Moody and oppressive.
 
+  # 18. 国家地理/纪实 (National Geographic)
   national_geographic:
     id  : national_geographic
-    name: "国家地理·纪实 (Nat Geo)"
+    name: "纪实·大片 (Nat Geo Raw)"
     category: "Photography"
     prompt_template: >
-      (masterpiece), award winning photography, National Geographic style,
-      highly detailed, 8k resolution, raw photo,
-      {description},
-      natural lighting, depth of field, sharp focus, professional color grading
-    negative_prompt: "painting, drawing, illustration, cartoon, 3d, anime"
+      (masterpiece), Award-winning photojournalism aesthetic, Steve McCurry style.
+      "Kodachrome 64" film simulation (rich, deep colors, strong contrast).
+      High dynamic range, impeccable micro-contrast and texture detail (skin/rock/fabric).
+      Natural environmental lighting (Golden Hour or diffused overcast), shallow depth of field (Bokeh).
+      Authentic storytelling composition, raw and unpolished reality.
+      {description}
+    negative_prompt: "cgi, 3d render, painting, drawing, illustration, oversaturated, plastic skin, airbrushed, studio lighting, artificial"
     recommended_denoising: 0.35
+    # 🔴 Motion Guide: 强调“生态感”与“慢动作”
+    motion_guide: >
+      Priority: Hyper-Realism.
+      Strictly Static (Anchor): The focal point (e.g., eyes of a subject or a mountain peak).
+      Allowed Motion:
+        - Nature: Wind interaction (grass/fur blowing), water flowing (slow shutter speed look).
+        - Environment: Subtle time-lapse effect (shadows moving, clouds drifting).
+        - Vibe: Documentary, observational, breathing with the environment.
+      Intensity: Very Low to Medium. Natural and organic.
 
   # ==================================================
   # 🟣 情绪与氛围类 (INS风/玄学/小众)
   # ==================================================
+  # 19. 梦核/阈限空间 (Dreamcore / Liminal)
   dreamcore_surreal:
     id : dreamcore_surreal
-    name: "梦核·超现实 (Dreamcore)"
+    name: "梦核·阈限 (Liminal Space)"
     category: "Aesthetic"
     prompt_template: >
-      (masterpiece), dreamcore aesthetic, liminal space, surrealism,
-      weirdly familiar, soft fuzzy texture, nostalgia,
-      {description},
-      blue sky with white clouds, unnatural lighting, dreamlike, eerie but comforting
-    negative_prompt: "realistic, dark, scary, horror, sharp"
+      (masterpiece), Dreamcore aesthetic, "Liminal Space" photography.
+      Concept: "Kenopsia" (the eerie atmosphere of a place that's usually bustling but is now empty).
+      Visuals: Lo-fi digital texture, slight jpeg compression artifacts (nostalgia), artificial flat lighting.
+      Uncanny familiarity, soft focus, pastel or hyper-saturated synthetic colors.
+      Surreal composition, devoid of human presence (or obscured faces), dreamlike logic.
+      {description}
+    negative_prompt: "realistic, sharp 4k, dark horror, gore, scary, detailed textures, high contrast, cinematic, crowded"
     recommended_denoising: 0.60
+    # 🔴 Motion Guide: 强调“错乱感”与“人工静止”
+    motion_guide: >
+      Priority: Uncanny Stillness.
+      Strictly Static (Anchor): The architecture and geometry.
+      Allowed Motion:
+        - Texture: Visual static/grain overlay (TV snow) or subtle color shifting.
+        - Physics: Unnatural floating of small objects (dust or balloons).
+        - Light: Fluorescent light humming/flickering (if indoor) or static cloud drift (if outdoor).
+      Intensity: Low. Eerie and psychological.
 
+  # 20. 极简/INS风 (Minimalist)
   minimalist_ins:
     id : minimalist_ins
-    name: "极简·INS风 (Minimalist)"
+    name: "极简·留白 (Minimalist)"
     category: "Aesthetic"
     prompt_template: >
-      (masterpiece), minimalist style, flat lay photography or simple illustration,
-      clean background, negative space, morandi colors,
-      {description},
-      modern, elegant, high end, instagram aesthetic, less is more
-    negative_prompt: "cluttered, messy, detailed, complex, noise"
+      (masterpiece), Minimalist design aesthetic, High-end lifestyle photography.
+      Composition: Dominance of "Negative Space", geometric balance, clean lines.
+      Lighting: High-key soft diffused lighting (shadowless or soft shadows), airy atmosphere.
+      Color: Neutral color palette (Morandi tones, beige, white, sage), desaturated and matte.
+      Modern, sophisticated, reductionist philosophy ("Less is More").
+      {description}
+    negative_prompt: "cluttered, messy, chaotic, vibrant neon, heavy contrast, complex patterns, grunge, dirty, noise"
     recommended_denoising: 0.50
+    # 🔴 Motion Guide: 强调“时间静止”与“生活流”
+    motion_guide: >
+      Priority: Zen Calmness.
+      Strictly Static (Anchor): The main subject and composition lines.
+      Allowed Motion:
+        - Light: Very slow shadow elongation (Time-lapse feel, sun moving).
+        - Nature: A single plant leaf swaying gently, or sheer curtains breathing.
+        - Vibe: Frozen in a perfect moment, almost static but alive.
+      Intensity: Very Low. Relaxing and clean.
     
-    # ==================================================
+  # ==================================================
   # 🔥 当季爆款 (Trending)
   # ==================================================
+  # 21. 粘土定格 (Claymation)
   clay_stop_motion:
     id : clay_stop_motion
-    name: "粘土世界·定格 (Claymation)"
+    name: "粘土·定格 (Clay Stop-Motion)"
     category: "Trending"
     prompt_template: >
-      (masterpiece, best quality:1.2), claymation style, stop motion animation,
-      plasticine material, play-doh texture, soft rounded edges,
-      {description},
-      matte finish, handmade feel, miniature world, tilt-shift photography,
-      soft studio lighting, cute, chunky, 3d render but clay texture
-    negative_prompt: "glossy, shiny, metallic, realistic skin, real photo, 2d, sketch, anime, sharp edges"
+      (masterpiece), Claymation / Stop-motion animation aesthetic, Aardman style influence.
+      Tactile "Plasticine" texture with visible fingerprints and imperfections.
+      Soft rounded organic shapes, matte finish (lack of specular highlights), physical material feel.
+      Miniature scale lighting (Macro photography feel), soft studio softbox lighting.
+      Handmade craftsmanship vibe, solid opaque colors.
+      {description}
+    negative_prompt: "glossy, metallic, wet, hyper-realistic, sharp digital 3D, seamless, smooth AI render, anime, 2d, sketch"
     recommended_denoising: 0.65
+    # 🔴 Motion Guide: 强调“抽帧感”与“手工痕迹”
+    motion_guide: >
+      Priority: Stuttery Animation (12fps).
+      Strictly Static (Anchor): The ground plane and heavy props.
+      Allowed Motion:
+        - Framerate: Jerky, low-frame-rate movement (Stop-motion aesthetic). No smooth motion blur.
+        - Texture: "Texture Boil" (surface imperfections/fingerprints changing slightly every frame).
+        - Physics: Squash and stretch deformation on moving elements.
+      Intensity: Medium. Playful and tactile.
+
+  # 22. Y3K 未来/液态 (Y3K / Chrometype)
+  y3k_cyber:
+    id: y3k_cyber
+    name: "Y3K·液态 (Y3K Fluid)"
+    category: "Trending"
+    prompt_template: >
+      (masterpiece), Y3K Post-Internet aesthetic, Fluid Chrome Art style.
+      Liquid metal textures (mercury/silver), iridescent holographic surfaces, glossy bioluminescence.
+      Organic digital surrealism, sharp crystalline details vs soft airbrushed glow.
+      Color palette: Cold silver, electric blue, acid purple, and translucent pearlescent white.
+      Futuristic, glossy 3D rendering (CGI), abstract organic curves.
+      {description}
+    negative_prompt: "grunge, rust, dirty, low resolution, matte finish, dull colors, retro grainy, noise, industrial machinery"
+    recommended_denoising: 0.65
+    # 🔴 Motion Guide: 强调“液态流动”与“数字光泽”
+    motion_guide: >
+      Priority: Liquid Fluidity.
+      Strictly Static (Anchor): Hard geometry or central composition structure.
+      Allowed Motion:
+        - Texture: "Liquid metal" flow (slow, viscous movement of the surface).
+        - Light: Iridescent color shifting (hologram effect) moving across surfaces.
+        - Vibe: Ethereal, floating, zero-gravity.
+      Intensity: Medium. Smooth and glossy.
+
+  # 23. 美拉德/治愈 (Maillard / Hygge)
+  maillard_cozy:
+    id: maillard_cozy
+    name: "美拉德·暖调 (Maillard Cozy)"
+    category: "Trending"
+    prompt_template: >
+      (masterpiece), Maillard Color Theory aesthetic, Warm Tone-on-Tone styling.
+      Rich earth tones gradient: Amber, burnt orange, caramel, warm beige, chocolate brown.
+      Textural contrast: Soft knits, matte ceramics, warm wood grain, tactile diffuse surfaces.
+      Lighting: Golden hour soft focus, "Tyndall effect" (sunlight beams), low contrast cozy atmosphere.
+      Minimalist but warm, "Hygge" lifestyle vibe, high-end editorial composition.
+      {description}
+    negative_prompt: "cool tones, blue, neon, cold, industrial, harsh contrast, metallic, plastic, sci-fi, shiny, glossy"
+    recommended_denoising: 0.55
+    # 🔴 Motion Guide: 强调“温度感”与“极其微弱的动”
+    motion_guide: >
+      Priority: Cozy Stillness.
+      Strictly Static (Anchor): Everything solid (furniture, cups, books).
+      Allowed Motion:
+        - Light: Very slow, warm sunlight patches shifting (Time-lapse).
+        - Atmosphere: Dust motes dancing in the sunbeams (Tyndall effect).
+        - Nature: Subtle steam rising (if hot drink present) or gentle curtain sway.
+      Intensity: Very Low. Warm and slow.
+
+  # ==============================================
+  # 🎨 Global Design Trends (全球设计趋势)
+  # ==============================================
+
+  # 24. 潮玩/盲盒 (Pop Mart / Vinyl)
+  pop_mart_3D:
+    id: pop_mart_3D
+    name: "潮玩·软胶 (Soft Vinyl)"
+    category: "Trending"
+    prompt_template: >
+      (masterpiece), Designer Toy aesthetic, Pop Mart / Art Toy style.
+      Materials: "Soft Vinyl" (Sofubi) texture, smooth matte PVC finish, subtle velvet flocking accents.
+      Geometry: Soft rounded bevels, simplified forms, lack of sharp noise.
+      Lighting: Softbox studio lighting (diffused reflections), high-fidelity Octane Render.
+      Clean, minimalist background, tangible physical object feel.
+      {description}
+    negative_prompt: "realistic skin, rough texture, dirty, grunge, sharp jagged edges, scary, dark, noisy, 2d, sketch"
+    recommended_denoising: 0.65
+    # 🔴 Motion Guide: 强调“塑胶感”与“重心晃动”
+    motion_guide: >
+      Priority: Plastic Stiffness.
+      Strictly Static (Anchor): The object shape itself (no morphing).
+      Allowed Motion:
+        - Physics: "Bobblehead" movement (slight springy wobble if the subject moves).
+        - Light: Soft studio light reflection gliding across the matte surface.
+        - Vibe: Idle animation of a toy character (blinking, slight rotation).
+      Intensity: Medium. Bouncy and stiff.
+
+  # 25. 酸性磨砂玻璃 (Acid Frosted Glass)
+  frosted_glass:
+    id: frosted_glass
+    name: "磨砂·弥散 (Glassmorphism)"
+    category: "Trending"
+    prompt_template: >
+      (masterpiece), Glassmorphism UI aesthetic, Acid Graphics style.
+      Overlay texture: "Frosted Glass" (blur barrier), strong Gaussian blur diffusion.
+      Lighting: Translucent subsurface light scattering, vibrant fluid gradients.
+      Composition: Layered depth, objects seen *through* a misty/glassy distortion.
+      Modern, clean, tech-inspired, subtle grain/noise overlay.
+      {description}
+    negative_prompt: "sharp clear focus, realistic photo, dirty, rust, heavy textures, solid opaque colors, flat, cartoon"
+    recommended_denoising: 0.60
+    # 🔴 Motion Guide: 强调“模糊流动”与“光学折射”
+    motion_guide: >
+      Priority: Fluid Diffusion.
+      Strictly Static (Anchor): The overall frame boundaries.
+      Allowed Motion:
+        - Light: Colors merging and separating slowly (Lava lamp logic).
+        - Texture: The "frosted" noise grain shifting (digital static).
+        - Physics: Objects floating slowly behind the glass layer (muffled movement).
+      Intensity: Low. Smooth and hypnotic.
+
+  # 26. 纸艺立体层叠 (Paper Cutout Lightbox)
+  paper_cutout:
+    id: paper_cutout
+    name: "纸雕·层叠 (Paper Layers)"
+    category: "Trending"
+    prompt_template: >
+      (masterpiece), Layered Paper Cutout art style, Lightbox aesthetic.
+      Technique: "Multi-layered" composition with distinct depth separation.
+      Lighting: Strong Backlighting (Silhouette effect), warm glowing light transmission through paper.
+      Texture: High-quality paper grain, fiber texture, visible cast shadows (drop shadows) between layers.
+      Intricate craftsmanship, physical depth simulation.
+      {description}
+    negative_prompt: "flat 2d, drawing, painting, 3d render plastic, glossy, realistic photo, sketch, messy"
+    recommended_denoising: 0.65
+    # 🔴 Motion Guide: 强调“视差”与“光源闪烁”
+    motion_guide: >
+      Priority: Parallax Depth.
+      Strictly Static (Anchor): The paper edges (they don't morph).
+      Allowed Motion:
+        - Parallax: Layers moving at different speeds (3D depth illusion).
+        - Light: The backlight flickering slightly (candle/warm bulb feel).
+        - Atmosphere: Tiny dust motes caught between the paper layers.
+      Intensity: Low. Theatrical and magical.
+
+  # 27. 复古未来/合成波 (Retro-Futurism / Synthwave)
+  retro_wave:
+    id: retro_wave
+    name: "合成波·霓虹 (Synthwave)"
+    category: "Trending"
+    prompt_template: >
+      (masterpiece), 80s Retro-futurism, Synthwave / Outrun aesthetic.
+      Visuals: "Neon Grid" topology (wireframe landscapes), glowing vector lines.
+      Texture: CRT monitor scanlines, VHS tracking error, slight chromatic aberration.
+      Lighting: Low-poly glowing neon light sources, dark background contrast.
+      Nostalgic digital sci-fi vibe, chrome reflections.
+      {description}
+    negative_prompt: "modern, minimalist, flat, pastel, rustic, natural, daylight, high resolution clean, 4k photography"
+    recommended_denoising: 0.60
+    # 🔴 Motion Guide: 强调“无限推进”与“电子故障”
+    motion_guide: >
+      Priority: Forward Momentum.
+      Strictly Static (Anchor): The central subject (e.g., car, person).
+      Allowed Motion:
+        - Geometry: The ground grid scrolling endlessly towards the horizon.
+        - Tech: VHS glitch/static noise appearing randomly.
+        - Light: Neon lines pulsing to a beat.
+      Intensity: Medium. Driving and rhythmic.

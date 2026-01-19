@@ -53,10 +53,10 @@ def check_available_models():
         print("="*40)
         if gemini_models:
             # 只打印 flash 和 pro 等常用模型，防止列表太长
-            common_gemini = [m for m in gemini_models if "flash" in m or "pro" in m]
-            for m in common_gemini:
+            # common_gemini = [m for m in gemini_models if "flash" in m or "pro" in m]
+            for m in gemini_models:
                 print(f"✅ {m}")
-            print(f"... 以及其他 {len(gemini_models) - len(common_gemini)} 个 Gemini 变体")
+            print(f"... 以及其他 {len(gemini_models)} 个 Gemini 变体")
         else:
             print("❌ 未找到 Gemini 模型")
 

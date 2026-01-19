@@ -17,7 +17,7 @@ class ImageGenerator:
         if self.google_api_key:
             self.client = genai.Client(api_key=self.google_api_key)
             self.imagen_model = "imagen-4.0-generate-001" 
-            self.vision_model = "gemini-2.5-flash-image"
+            self.vision_model = "gemini-3-pro-image-preview"
 
     def generate(self, image_path, prompt_data):
         """
@@ -124,7 +124,7 @@ class ImageGenerator:
                 model=self.vision_model,
                 contents=[ref_image, full_prompt]
             )
-            return self._save_response_image(response, image_path, style_key, extension=".jpg")
+            return self._save_response_image(response, image_path, style_key,engine_tag="GeminiVision")
 
         except Exception as e:
             print(f"❌ [失败] {e}")
