@@ -46,8 +46,8 @@
 
 1.  **克隆项目**
     ```bash
-    git clone [https://github.com/mayuhao-213/wallpaper-agent.git](https://github.com/mayuhao-213/wallpaper-agent.git)
-    cd gemini-wallpaper-agent
+    git clone https://github.com/mayuhao-213/wallpaper-agent.git
+    cd wallpaper-agent
     ```
 
 2.  **安装依赖**
@@ -122,7 +122,8 @@ Unlike traditional filters, this agent acts as an **AI Art Director**. It unders
 
 1. **Installation**
 ```bash
-git clone [https://github.com/your-username/gemini-wallpaper-agent.git](https://github.com/your-username/gemini-wallpaper-agent.git)
+git clone https://github.com/mayuhao-213/wallpaper-agent.git
+cd wallpaper-agent
 pip install -r requirements.txt
 
 ```
